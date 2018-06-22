@@ -35,11 +35,8 @@ public class Task {
     @Column(name = "content", length = 255, nullable = false)
     private String content;
 
-    @Column(name = "created_at", nullable = false)
-    private Timestamp created_at;
-
-    @Column(name = "updated_at", nullable = false)
-    private Timestamp updated_at;
+    @Column(name = "deadline", nullable = false)
+    private Timestamp deadline;
 
     public Integer getId() {
         return id;
@@ -65,20 +62,12 @@ public class Task {
         this.content = content;
     }
 
-    public Timestamp getCreated_at() {
-        return created_at;
+    public Timestamp getDeadline() {
+        return deadline;
     }
 
-    public void setCreated_at(Timestamp created_at) {
-        this.created_at = created_at;
-    }
-
-    public Timestamp getUpdated_at() {
-        return updated_at;
-    }
-
-    public void setUpdated_at(Timestamp updated_at) {
-        this.updated_at = updated_at;
+    public void setDeadline(Timestamp deadline) {
+        this.deadline = deadline;
     }
 
 }
